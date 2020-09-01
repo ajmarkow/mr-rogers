@@ -4,14 +4,14 @@ let residualarray = [];
 // console.log(usernumber);
 
 function populateArray(usernumber) {
-  for (let index = 0; index <= usernumber; index += 1) {
+  for (let index = 1; index <= usernumber; index += 1) {
     residualarray.push(index);
   }
-  console.log("array populated");
+  return residualarray;
 }
 
 function checkForMatch(usernumber) {
-  for (let i = 0; i <= usernumber; i++) {
+  for (let i = 1; i < usernumber; i++) {
     const element = i.toString();
     if (element.includes(3)) {
       residualarray.push("Won't you be my neighbor?");
@@ -23,7 +23,7 @@ function checkForMatch(usernumber) {
       residualarray.push(element);
     }
   }
-  return residualarray;
+  // return residualarray;
 }
 
 //User Interface Logic
