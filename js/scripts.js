@@ -4,7 +4,7 @@ let residualarray = [];
 // console.log(usernumber);
 
 function populateArray(usernumber) {
-  for (let index = 1; index <= usernumber; index += 1) {
+  for (let index = 1; index < usernumber; index += 1) {
     residualarray.push(index);
   }
   return residualarray;
@@ -23,7 +23,7 @@ function checkForMatch(usernumber) {
       residualarray.push(element);
     }
   }
-  // return residualarray;
+  return residualarray;
 }
 
 //User Interface Logic
