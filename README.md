@@ -1,37 +1,36 @@
-# *🤖 Mr Robo-gers Neighborhood*
+# _🤖 Mr Robo-gers Neighborhood_
 
-* * *
-*Returns 'Mr Rogers Neighborhood' themed responses to numerical input, Friday, August 21, 2020*
+---
 
-By ***AJ Markow***
+_Returns 'Mr Rogers Neighborhood' themed responses to numerical input, Friday, August 21, 2020_
 
+By **_AJ Markow_**
 
 ## Description
 
-*A webpage with a text input and submit functions.  The javascript parses the input information, and uses looping and arrays to determine the correct Mr. Rogers themed response based on user input.*
-
+_A webpage with a text input and submit functions. The javascript parses the input information, and uses looping and arrays to determine the correct Mr. Rogers themed response based on user input._
 
 ## Setup/Installation Requirements
 
-*1. Load Index.html onto web server or computer on which you're viewing project.*  
+_1. Use git clone to clone project root directory._
 
-*2 Load fonts, jQuery and bootstrap links from the internet.*  
+_2.Load Index.html onto web server or computer on which you're viewing project._
 
-*3. Launch site in your browser.*
+_2 Load fonts, jQuery and bootstrap links from the internet._
 
+_3. Launch site in your browser._
 
 ## Known Bugs
 
-*Number input is limited to numbers 1 through 100*
+_Number input is limited to numbers 1 through 100_
 
 ## Support and contact details
 
 *alexanderjmarkow@gmail.com or contact me at https://ajm.codes*
 
-
 ## Technologies Used
 
-*CSS, Google Fonts, HTML, JavaScript, jQuery.*
+_CSS, Google Fonts, HTML, JavaScript, jQuery._
 
 ### License
 
@@ -57,4 +56,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) 2020 ***AJ Markow***
+Copyright (c) 2020 **_AJ Markow_**
+
+## Test Specs
+
+Test: If number is 3, 2, or 1, respective phrase is reserved.
+Describe: Checks for number that includes number and returns phrase instead.
+Code: checkformatch("3")
+Expect: Arrayelement.toequal("Won't you be my neighbor")
+
+Test Passed

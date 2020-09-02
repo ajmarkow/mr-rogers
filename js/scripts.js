@@ -1,5 +1,5 @@
 // Business Logic
-let residualarray = [];
+
 // var usernumber = $("input#numberinput").val();
 // console.log(usernumber);
 
@@ -11,6 +11,7 @@ function populateArray(usernumber) {
 }
 
 function checkForMatch(usernumber) {
+  let residualarray = [];
   for (let i = 0; i <= usernumber; i++) {
     const element = i.toString();
     if (element.includes(3)) {
@@ -27,7 +28,6 @@ function checkForMatch(usernumber) {
 }
 
 function cleanArray(usernumber) {
-  residualarray.shift();
   residualarray.splice(0, usernumber);
   // return residualarray;
 }
@@ -37,7 +37,7 @@ $(document).ready(function () {
   $("form#usernumbers").submit(function (event) {
     let usernumber = $("input#numberinput").val();
     populateArray(usernumber);
-    checkForMatch(usernumber);
+    let residualarray = checkForMatch(usernumber);
     cleanArray(usernumber);
     console.log(residualarray);
     $("#mrrobogersoutput").text(residualarray);
