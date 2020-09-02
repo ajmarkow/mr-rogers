@@ -1,43 +1,27 @@
 // Business Logic
-let residualarray = [];
 
-function populateArray(usernumber) {
-  for (let index = 0; index < usernumber; index += 1) {
-    residualarray.push(index);
-  }
-  return residualarray;
-}
-
-function checkForMatch(usernumber) {
-  for (let i = 0; i <= usernumber; i++) {
+function checkForMatch(userNumber) {
+  let residualArray = [];
+  for (let i = 0; i <= userNumber; i++) {
     const element = i.toString();
     if (element.includes(3)) {
-      residualarray.push("Won't you be my neighbor?");
+      residualArray.push("Won't you be my neighbor?");
     } else if (element.includes(2)) {
-      residualarray.push("Boop!");
+      residualArray.push("Boop!");
     } else if (element.includes(1)) {
-      residualarray.push("Beep");
+      residualArray.push("Beep");
     } else {
-      residualarray.push(element);
+      residualArray.push(element);
     }
   }
-  return residualarray;
+  return residualArray;
 }
-
-function cleanArray(usernumber) {
-  residualarray.splice(0, usernumber);
-  // return residualarray;
-}
-
 //User Interface Logic
 $(document).ready(function () {
   $("form#usernumbers").submit(function (event) {
-    let usernumber = $("input#numberinput").val();
-    populateArray(usernumber);
-    checkForMatch(usernumber);
-    cleanArray(usernumber);
-    console.log(residualarray);
-    $("#mrrobogersoutput").text(residualarray);
+    let input = $("input#numberinput").val();
+    let outputArray = checkForMatch(input);
+    $("#mrrobogersoutput").text(outputArray);
     event.preventDefault();
   });
 });
